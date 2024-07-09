@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.matteolobello.mapapers.view.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="72dp"
+    android:layout_height="72dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center">
+
+    <com.jcminarro.roundkornerlayout.RoundKornerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:corner_radius="9dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/mapStyleIndicatorImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/mapStyleIndicatorCheck"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="#80000000"
+            android:padding="16dp"
+            app:srcCompat="@drawable/ic_check_black_24dp"
+            app:tint="@android:color/white" />
+
+    </com.jcminarro.roundkornerlayout.RoundKornerFrameLayout>
+
+</com.matteolobello.mapapers.view.SquareRelativeLayout>

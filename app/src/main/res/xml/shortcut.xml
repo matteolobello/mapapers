@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:targetApi="25">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_casino"
+        android:shortcutId="im_feeling_lucky_shortcut_id"
+        android:shortcutShortLabel="@string/im_feeling_lucky">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.matteolobello.mapapers.activity.LaunchScreenActivity"
+            android:targetPackage="com.matteolobello.mapapers">
+            <extra
+                android:name="com.matteolobello.mapapers.activity.IM_FEELING_LUCKY_COORDINATES_SHORTCUT"
+                android:value="true" />
+        </intent>
+    </shortcut>
+</shortcuts>

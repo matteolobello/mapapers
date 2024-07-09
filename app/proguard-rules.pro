@@ -1,0 +1,3 @@
+-dontwarn com.squareup.**
+-dontwarn khttp.**
+-ignorewarnings

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewSwitcher"
+    android:layout_width="match_parent"
+    android:layout_height="311dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    android:layout_centerHorizontal="true"
+    android:background="@android:color/white"
+    android:inAnimation="@android:anim/fade_in"
+    android:outAnimation="@android:anim/fade_out"
+    app:elevation="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/loading" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/bottomPanelNestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/saveButton"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/stylesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/styles"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/roboto_medium" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/styleSelectorRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="2dp"
+                    android:clipToPadding="false"
+                    android:orientation="vertical" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customizeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/customize"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/roboto_medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1.0">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/waterColorImageView"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            app:civ_border_color="#EAEAEA"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/waterColorImageView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/water" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/landColorImageView"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            app:civ_border_color="#EAEAEA"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/landColorImageView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/land" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/cityColorImageView"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            app:civ_border_color="#EAEAEA"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cityColorImageView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/city" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/roadsColorImageView"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            app:civ_border_color="#EAEAEA"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/roadsColorImageView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/roads" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            app:elevation="8dp" />
+
+    </RelativeLayout>
+
+</ViewSwitcher>

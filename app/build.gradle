@@ -1,0 +1,56 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.matteolobello.mapapers"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 12
+        versionName "1.7"
+        vectorDrawables.useSupportLibrary true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+}
+
+configurations {
+    all {
+        exclude group: "org.json", module: "json"
+    }
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "com.android.support:appcompat-v7:27.0.2"
+    implementation "com.android.support:design:27.0.2"
+    implementation "com.google.android.gms:play-services-maps:11.8.0"
+    implementation "com.google.android.gms:play-services-location:11.8.0"
+    implementation "com.google.android.gms:play-services-places:11.8.0"
+    implementation "com.android.support:recyclerview-v7:27.0.2"
+    implementation "khttp:khttp:0.1.0"
+    implementation "com.squareup.picasso:picasso:2.5.2"
+    implementation "com.github.rahatarmanahmed:circularprogressview:2.5.0"
+    implementation "com.github.javiersantos:PiracyChecker:1.1"
+    implementation "com.jcminarro:RoundKornerLayouts:0.3.1"
+    implementation "de.hdodenhof:circleimageview:2.2.0"
+    implementation "com.soundcloud.android:android-crop:1.0.1@aar"
+    implementation "com.jaredrummler:colorpicker:1.0.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+
+androidExtensions {
+    experimental = true
+}

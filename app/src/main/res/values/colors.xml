@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4455a5</color>
+    <color name="colorPrimaryDark">#4049a1</color>
+    <color name="colorAccent">@android:color/black</color>
+
+    <color name="search_bar_bg_color">#eceff1</color>
+    <color name="text_color">#727272</color>
+    <color name="light_system_bars_color">#20111111</color>
+    <color name="snackbar_nav_bar_color">#212121</color>
+</resources>
